@@ -55,5 +55,12 @@ namespace MyStreaming.API.Controllers
             _suscripcionService.UpdateSuscripcion(suscripcion);
             return Ok();
         }
+        [HttpGet]
+        [Route("[action]")]
+        [Route("api/Suscripciones/GetNumSus")]
+        public int GetNumSus()
+        {
+            return _suscripcionService.GetNumSus();
+        }
     }
 }

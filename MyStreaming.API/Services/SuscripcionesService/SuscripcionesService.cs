@@ -53,6 +53,11 @@ namespace MyStreaming.API.Services.SuscripcionesService
             _myStreamingDbContext.suscripcion.Update(suscripcion);
             _myStreamingDbContext.SaveChanges();
         }
+        public int GetNumSus()
+        {
+            int n = _myStreamingDbContext.suscripcion.Where(o => o.pagado == true).Count();
+            return n;
+        }
         #endregion
     }
 }

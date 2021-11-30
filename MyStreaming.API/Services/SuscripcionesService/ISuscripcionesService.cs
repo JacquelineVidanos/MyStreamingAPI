@@ -12,5 +12,6 @@ namespace MyStreaming.API.Services.SuscripcionesService
         void UpdateSuscripcion(Suscripciones suscripcion);
         string DeleteSuscripcion(int id);
         List<Suscripciones> GetSuscripcionesPorUsu(int idUsu);
+        int GetNumSus();
     }
 }
